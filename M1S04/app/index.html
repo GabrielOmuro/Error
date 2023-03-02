@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de Valores</title>
+    <style>
+        #form {
+            background-color: aliceblue;
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+            align-items: center;
+            border: 3px solid gray;
+            border-radius: 10px;
+            height: 310px;
+            width: 400px;
+            flex-direction: column;
+        } 
+
+
+        label{
+            color: rgb(30, 116, 255);
+            font-size: 20px;
+        }
+
+        button{
+            border-radius: 3px;
+            border: 1px solid black;
+            background-color: rgb(30, 116, 255);
+            padding: 5px;
+            width: 200px;
+            color: aliceblue;
+            font-size: 17px;
+        }
+
+        button:hover{
+            background-color: darkblue;
+            color: grey;
+            width: 190px;
+            font-size: 11px;
+        }
+
+        input{
+            border-radius: 3px;
+            border: 1px solid rgb(30, 116, 255);
+        }
+
+        input::placeholder{
+            color: rgb(28, 138, 255);
+        }
+
+        body{
+            background-image: url(https://img.freepik.com/vetores-gratis/conceito-de-mercado-de-acoes-gradiente_23-2149166910.jpg?w=2000);
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form id="formu" onsubmit="event.preventDefault()"> 
+            <br>
+            <label for="campoData">Data da Negociação:</label><br>
+            <br>
+            <input id="campoData" type="date"><br>
+            <br>
+            <label for="campoQuantidade">Ações Vendidas:</label><br>
+            <br>
+            <input id="campoQuantidade" type="number" min="0" placeholder="100" max="100"><br>
+            <br>
+            <label for="campoValor">Valor da Negociação:</label><br>
+            <br>
+            <input id="campoValor" type="number" min="0.0" placeholder="394" max="100000"><br>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script type="module" src="js/controllers/negociacaoController.js"></script>
+</body>
+</html>
