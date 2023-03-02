@@ -11,7 +11,7 @@ export class NegociacaoController {
     }
     
     criarNegociacao(){
-        let data = new Date(this.#campoData + "T00:00:00-03:00").toLocaleDateString();
+        let data = new Date(this.#campoData.value + "T00:00:00-03:00").toLocaleDateString();
         let quantidade = this.#campoQuantidade.value;
         let valor = this.#campoValor.value;
         console.log(data, quantidade, valor);
@@ -22,4 +22,5 @@ export class NegociacaoController {
     }
 
 }
+
 
